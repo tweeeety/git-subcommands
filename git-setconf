@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#
+echo "[Notice] set git config"
+git config user.name "tweeeety"
+git config user.email "tweeeety.0719@gmail.com"
+
+# 
+echo "[Notice] git config --list"
+git config --list
