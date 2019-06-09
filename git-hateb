@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# var
+input=""
+
+# show latest dir name
+newdir=`ls -ltr1 | tail -1`
+echo "[Notice] new dirname: $newdir"
+
+# input
+read -p "please enter y/n: " input
+if [ "$input" = "n" ]; then
+  echo "[Notice] exit."
+  exit 0
+fi
+
+currentDir=`pwd`
+
+echo $currentDir
+
+git add $newdir
+git commit -m "add note"
+git push origin master
